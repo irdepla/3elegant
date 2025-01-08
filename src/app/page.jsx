@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Card from "./components/Card/index.jsx";
+import Card from "../components/Card/index.jsx";
 
 export default async function Home() {
   const PRODUCTS_GET_URL = "http://localhost:5000/products";
