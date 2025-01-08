@@ -1,16 +1,25 @@
-/** @type {import('tailwindcss').Config} */
+/**@type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "16px"
       },
+      width: {
+        DEFAULT: "100%",
+        desktop: "1120px"
+      },
+      minWidth: {
+        DEFAULT: "375px",
+      }
+    },
+    screens: {
+      desktop: "1152px",
     },
   },
   plugins: [],
