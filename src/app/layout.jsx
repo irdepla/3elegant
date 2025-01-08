@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import axios from "axios";
 import Image from "next/image";
-import NavLogo from "../../public/nav-logo.svg"
+import NavLogo from "../../public/nav-logo.svg";
 import Link from "next/link";
 
 const geistSans = Geist({
@@ -14,8 +14,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-
 
 export const metadata = {
   title: "Create Next App",
@@ -37,21 +35,15 @@ export default function RootLayout({ children }) {
               <ul className="nav__list flex gap-2">
                 <li>
                   <Link href="/">
-                  <span>
-                    Home
-                  </span>
+                    <span>Home</span>
                   </Link>
                 </li>
 
                 <li>
                   <Link href="/">
-                  <span>
-                    About
-                  </span>
+                    <span>About</span>
                   </Link>
                 </li>
-
-
               </ul>
             </div>
           </nav>
