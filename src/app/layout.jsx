@@ -3,7 +3,11 @@ import "./globals.css";
 import axios from "axios";
 import Image from "next/image";
 import NavLogo from "../../public/nav-logo.svg";
+import Search from "../../public/search-icon.svg"
+import AdminLogo from "../../public/admin-logo.svg"
+import CartIcon from "../../public/Cart-icon.svg"
 import Link from "next/link";
+import TopHeader from "@/components/TopHeader/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,12 +25,17 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+
+
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header>
+          <TopHeader />
           <nav className="nav">
             <div className="nav__wrapper flex justify-between items-center py-2 px-4">
               <div>
@@ -41,10 +50,39 @@ export default function RootLayout({ children }) {
 
                 <li>
                   <Link href="/">
-                    <span>About</span>
+                    <span>Shop</span>
                   </Link>
                 </li>
+
+
+                <li>
+                  <Link href="/">
+                    <span>Product</span>
+                  </Link>
+                </li>
+
+                
+                <li>
+                  <Link href="/contact-us">
+                    <span>Contact Us</span>
+                  </Link>
+                </li>
+
+                
               </ul>
+              <div className="flex gap-4">
+                <button>
+                  <Image src={Search} alt="search icon" />
+                </button>
+                <button>
+                  <Link href="/admin">
+                  <Image src={AdminLogo} alt="person logo" />
+                  </Link>
+                </button>
+                <button>
+                  <Image src={CartIcon} alt="cart icon" />
+                </button>
+              </div>
             </div>
           </nav>
         </header>
